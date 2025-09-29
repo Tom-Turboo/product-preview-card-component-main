@@ -5,8 +5,9 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
+    color: hsl(228, 12%, 48%);
    }
-
+ 
 body {
     min-height: 100vh;
     display: flex;
@@ -15,30 +16,107 @@ body {
     flex-direction: column;
     background-color: hsl(30, 38%, 92%);
 }
-/* responisve Image */
+/* responsive Image */
 img {
-    width: 100%;
+    max-width: 100%;
 }
-
+ 
 .design {
     position: absolute;
     z-index: -1;
     opacity: 0.3;
     width: 375px;
-    
+   
 }
-
+ 
 .card {
     width: 350px;
     background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
 }
-
+ 
 .card-body {
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
-
-h2 {
-    font-family: "Fraunces", sans-serif;
+ 
+.product-name {
+    font-family: "Fraunces", serif;
+    color: black;
+    font-size: 2.3em;
+    line-height: 0.9;
 }
-
-
+ 
+.product-type {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+ 
+.product-description{
+    line-height: 1.5em;
+    font-weight: 500;
+}
+ 
+.price-old{
+    text-decoration: line-through;
+}
+ 
+.price-new{
+    color: hsl(158, 42%, 37%);
+    font-family: "Fraunces", serif;
+    font-size: 2.3em;
+    font-weight: bold;
+}
+ 
+.price{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+ 
+.button-buy{
+    color: white;
+    background-color: hsl(158, 42%, 37%);
+    height: 3em; /*1em 16px*/
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+ 
+.button-buy:hover{
+    cursor: pointer;
+}
+ 
+.button-buy:active{
+    background-color: hsl(158, 42%, 18%);
+}
+ 
+.desktop-image{
+    display: none;
+}
+.mobile-image{
+    display: block;
+}
+ 
+@media screen and (min-width: 768px) {
+    .card{
+        display: flex;
+        width: 600px;
+        /* overflow:visible; */
+    }
+   
+    .mobile-image{
+        display:none;
+    }
+    .desktop-image{
+    display: block;
+    width: 300px;
+}
+}
+ 
